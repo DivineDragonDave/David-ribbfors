@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: black;
+  font-family: "Exo", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  z-index: 100;
+  padding: 5px 20px;
+  border-bottom: solid 1px black;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.links {
+  display: contents;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 85vh;
+  gap: 20px;
+}
+
+.hero-img img {
+  height: 500px;
+  filter: grayscale(0.1);
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.sub {
+  padding: 0 20px 5px 20px;
+  max-width: 1000px;
+  text-align: center;
+  margin: auto;
+}
+
+.chip-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.chip {
+  border-radius: 9999px;
+  padding: 4px 12px;
+  font-size: 14px;
+  border: 1px solid black;
+}
+
+.pro-con {
+  padding: 0 20px;
+}
+
+.proj {
+  margin: 40px auto;
+  max-width: 1024px;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-con {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 150ms;
+}
+.proj:hover .img-con {
+  transform: scale(1.05);
+}
+
+.img-over {
+  position: absolute;
+  inset: 0px;
+  background-color: #26262699;
+}
+
+.proj-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proj-text-con {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.proj-titel {
+  font-size: 36px;
+  line-height: 40px;
+  color: white;
+  font-weight: 800;
+}
+
+.proj-text {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+footer {
+  padding: 20px;
+  background-color: rgb(229 231 235);
+}
+.footer {
+  text-align: center;
+  color: #4b5563;
+}
+
+button {
+  border: solid 1px black;
+  border-radius: 6px;
+  transition: border-radius 150ms;
+  width: 128px;
+  padding: 8px 0;
+  background-color: black;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  border-radius: 20px;
+}
+
+.white {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 12px 0px;
+    margin-top: 70px;
+  }
+  .hero h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .hero-img img {
+    height: 400px;
+  }
+  .hero-text-con {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 724px) {
+  p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .hero {
+    min-height: unset;
+    margin-bottom: 40px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .hero-img img {
+    height: min(50vh, 360px);
+  }
+  .titel {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 6px;
+  }
+
+  .chip {
+    padding: 4px 10px;
+  }
+
+  .proj {
+    margin: 25px auto;
+    height: 200px;
+  }
+
+  .proj-titel {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+
+  .proj-text {
+    padding: 0px 5px;
+  }
+
+  .nav {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .nav {
+    height: 60px;
+  }
+}
+.dark-mod-button-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+}
+
+.dark-mod-day {
+  font-weight: 300;
+}
+
+.dark-mod-night {
+  font-weight: 300;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+  background-color: #afd0f1;
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  height: 15px;
+  width: 15px;
+  transition: 0.4s;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.switch:has(input:checked) {
+  background-color: #46315c;
+}
+
+.switch:has(input:focus) {
+  box-shadow: 0 0 1px #46315c;
+}
+
+input:checked + .slider {
+  transform: translateX(26px);
+}
+
+.dark-mod-day {
+  color: #262626;
+}
+.dark-mod-nigth {
+  color: #2626265d;
+}
